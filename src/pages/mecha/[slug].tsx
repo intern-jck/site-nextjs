@@ -1,4 +1,6 @@
 import Carousel from '../../common/components/Carousel';
+import InfoPanel from '../../common/components/InfoPanel';
+
 import styles from '@/styles/Project.module.scss';
 import { getProject, getProjectPaths } from '../../modules/Data';
 import type { ProjectType } from '../../common/types/ProjectType';
@@ -20,6 +22,7 @@ export default function Project({ project }: Props) {
       <div className='page-content'>
         <div className={styles.projectContent}>
           <Carousel slides={project.photos} />
+          <InfoPanel project={project} />
         </div>
       </div>
 

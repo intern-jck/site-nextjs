@@ -30,7 +30,6 @@ export default function Carousel({ slides }: CarouselProps) {
   return (
     <>
       <div className={styles.carousel}>
-        CAROUSEL COMPONENT
         <div className={styles.carouselBody}>
           <div className={styles.carouselImage}>
             <Image
@@ -39,18 +38,6 @@ export default function Carousel({ slides }: CarouselProps) {
               fill
             />
           </div>
-          {/* <div className='carousel-header'>
-          {
-            slides[slideIndex].header ?
-              <h4>{slides[slideIndex].header}</h4> : null
-          }
-        </div>
-        <div className='carousel-short'>
-          {
-            slides[slideIndex].short ?
-              <h5><i>{slides[slideIndex].short}</i></h5> : null
-          }
-        </div> */}
 
           <div className={styles.carouselControls}>
             <button

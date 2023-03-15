@@ -26,10 +26,6 @@ export default function Photos({ photos }: Props) {
                     alt='photo not found...'
                     width='600'
                     height='400'
-                  // fill
-                  // sizes='(max-width: 768px) 100vw,
-                  // (max-width: 1200px) 50vw,
-                  // 33vw'
                   />
                 </button>
               )

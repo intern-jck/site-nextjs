@@ -5,7 +5,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
   height: 6rem;
   display: flex;
   flex-direction: row;
@@ -14,7 +13,6 @@
 }
 
 .brand {
-  // border: 4px solid blue;
   width: 20rem;
   margin-left: 1rem;
   font-size: large;
@@ -22,15 +20,10 @@
   text-align: center;
 }
 
-.ham_menu {
-  // height: 100%;
-  // border: 4px solid blue;
-}
+.ham_menu {}
 
 
 .navMenu {
-  // border: 4px solid blue;
-  // height: 100%;
   width: fit-content;
   font-size: xx-large;
   font-weight: bold;

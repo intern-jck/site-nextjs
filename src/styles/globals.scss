@@ -24,7 +24,6 @@ a:hover {
 }
 
 main {
-  // border: 4px solid black;
   margin-top: 8rem;
 }
 
@@ -34,22 +33,15 @@ h3 {
   text-align: center;
 }
 
-.container {
-  // border: 4px solid black;
-}
-
-.page-header {
-  // border: 4px solid black;
-}
-
 .page-content {
-  // border: 4px solid green;
   display: flex;
   flex-direction: column;
 }
 
-// ???????
 
+
+
+// ???????
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

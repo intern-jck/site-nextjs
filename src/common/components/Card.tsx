@@ -15,7 +15,6 @@ export default function Card(
   return (
     <div className={styles.card}>
       <span className={styles.cardTitle}>{cardTitle}</span>
-      {/* <span className={styles.cardTitle}>{cardId}</span> */}
       <div className={styles.cardImage}>
         <Image
           src={cardImage}

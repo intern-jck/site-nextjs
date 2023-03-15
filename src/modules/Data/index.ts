@@ -15,7 +15,29 @@ export async function getProjects() {
   }
 }
 
+export async function getProject(projectId: string) {
+  try {
+    const response = await axios.get(projectsURL);
+    const projects = await response.data;
+    return projects;
+  } catch (error) {
+    console.log('get projects error:', error)
+    return error;
+  }
+}
+
 export async function getPhotos() {
+  try {
+    const response = await axios.get(photosURL);
+    const photos = await response.data;
+    return photos;
+  } catch (error) {
+    console.log('get photos error:', error)
+    return error;
+  }
+}
+
+export async function getPhoto(photoId: string) {
   try {
     const response = await axios.get(photosURL);
     const photos = await response.data;

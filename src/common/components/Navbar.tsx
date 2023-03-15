@@ -3,12 +3,6 @@ import styles from '@/styles/Navbar.module.scss'
 
 export default function NavBarComponent() {
   return (
-    // <nav id='navbar' className={styles.navbar}>
-    //   <Link href='/mecha'>Mechatronics</Link>
-    //   <Link href='/photos'>Photos</Link>
-    //   <Link href='/randd'>R&D</Link>
-    //   <Link href='/login'>Contact</Link>
-    // </nav>
 
     <nav className={styles.navbar}>
       <div className={styles.brand}>

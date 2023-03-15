@@ -1,5 +1,5 @@
 // import styles from '@/styles/Slug.module.scss';
-import Carousel from '../../components/Carousel';
+import Carousel from '../../common/components/Carousel';
 import type ProjectType from '../../interfaces/project';
 
 type Props = {

@@ -38,16 +38,12 @@ h3 {
   flex-direction: column;
 }
 
-
-
-
 // ???????
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
-
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {}

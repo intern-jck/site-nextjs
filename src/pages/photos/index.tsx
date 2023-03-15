@@ -1,6 +1,7 @@
 import styles from '@/styles/Photos.module.scss';
 import { getPhotos } from '../../modules/Data';
 import Image from 'next/image'
+import Link from 'next/link';
 
 type Props = {
   photos: Array<string>,
@@ -29,7 +30,6 @@ export default function Photos({ photos }: Props) {
                   />
                 </button>
               )
-
             })
           }
         </div>

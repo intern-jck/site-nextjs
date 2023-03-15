@@ -19,14 +19,17 @@ export default function Mecha({ projects }: Props) {
         <div className={styles.mechaContent}>
           {
             projects.map((project, i) => {
-              return < Card
-                key={i}
-                cardId={project.link}
-                cardTitle={project.name}
-                cardImage={project.photos[0]}
-                cardText={project.short}
-                clickHandler={() => console.log(project.link)}
-              />
+              return (
+                <Card
+                  key={i}
+                  cardId={project.link}
+                  cardTitle={project.name}
+                  cardImage={project.photos[0]}
+                  cardText={project.short}
+                  cardSlug={project.link}
+                  clickHandler={() => console.log(project.link)}
+                />
+              )
             })
           }
         </div>

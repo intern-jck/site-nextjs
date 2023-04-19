@@ -1,18 +1,18 @@
-import styles from '@/styles/Mecha.module.scss';
 import type { ProjectType } from '../../common/types/ProjectType';
-import { getProjects } from '../../modules/Data';
+import { getProjects } from '../../modules/data';
 import Card from '../../common/components/Card';
+import styles from '@/styles/Mecha.module.scss';
 
 type Props = {
   projects: ProjectType[],
 };
 
-export default function Mecha({ projects }: Props) {
+export default function Work({ projects }: Props) {
   return (
     <div className='container'>
 
       <div className='page-header'>
-        <h1>MECHATRONICS</h1>
+        <h1>Work</h1>
       </div>
 
       <div className='page-content'>

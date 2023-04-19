@@ -1,5 +1,5 @@
 import styles from '@/styles/Photos.module.scss';
-import { getPhotos } from '../../modules/Data';
+import { getPhotos } from '../../modules/data';
 import Image from 'next/image'
 import Link from 'next/link';
 

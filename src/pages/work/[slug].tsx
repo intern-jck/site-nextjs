@@ -2,7 +2,7 @@ import Carousel from '../../common/components/Carousel';
 import InfoPanel from '../../common/components/InfoPanel';
 
 import styles from '@/styles/Project.module.scss';
-import { getProject, getProjectPaths } from '../../modules/Data';
+import { getProject, getProjectPaths } from '../../modules/data';
 import type { ProjectType } from '../../common/types/ProjectType';
 
 type Props = {

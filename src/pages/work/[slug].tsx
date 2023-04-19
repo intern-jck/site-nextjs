@@ -1,16 +1,16 @@
-import Carousel from '../../common/components/Carousel';
-import InfoPanel from '../../common/components/InfoPanel';
+import Carousel from '@/common/components/Carousel';
+import InfoPanel from '@/common/components/InfoPanel';
 
-import styles from '@/styles/Project.module.scss';
-import { getProject, getProjectPaths } from '../../modules/data';
-import type { ProjectType } from '../../common/types/ProjectType';
+import { getProject, getProjectPaths } from '@/modules/data';
+import type { ProjectType } from '@/common/types/';
+import styles from './WorkProject.module.scss';
 
 type Props = {
   project: ProjectType,
 }
 
-export default function Project({ project }: Props) {
-  console.log('project', project.link)
+export default function WorkProjectComponent({ project }: Props) {
+  console.log('work comp', project.link)
 
   return (
     <div className='container'>
@@ -21,8 +21,12 @@ export default function Project({ project }: Props) {
 
       <div className='page-content'>
         <div className={styles.projectContent}>
-          <Carousel slides={project.photos} />
-          <InfoPanel project={project} />
+          <div className={styles.workProjectCarousel}>
+            <Carousel slides={project.photos} />
+          </div>
+          <div className={styles.workProjectInfoPanel}>
+            <InfoPanel project={project} />
+          </div>
         </div>
       </div>
 
@@ -37,6 +41,7 @@ type ParamsType = {
 }
 
 export async function getStaticProps({ params }: ParamsType) {
+  console.log('work static props', params)
   const project = await getProject(params.slug);
   console.log('got project', project.link)
   return {
@@ -46,7 +51,6 @@ export async function getStaticProps({ params }: ParamsType) {
 
 export async function getStaticPaths() {
   const projectPaths = await getProjectPaths();
-  console.log('paths', projectPaths)
   return {
     paths: projectPaths.map((project) => {
       return {

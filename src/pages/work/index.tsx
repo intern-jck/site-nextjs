@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function Work({ projects }: Props) {
-  console.log(projects)
+  
   return (
     <div className='container'>
 
@@ -26,7 +26,7 @@ export default function Work({ projects }: Props) {
                   cardTitle={project.name}
                   cardImage={project.photos[0]}
                   cardText={project.short}
-                  cardLink={`/projects/${project.link}`}
+                  cardLink={`/work/${project.link}`}
                 />
               )
             })

@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Navbar from './Navbar';
+import Navbar from './core/Navbar';
 
 type LayoutProps = {
   children: React.ReactNode;
-}
+};
 
 export default function Layout({ children }: LayoutProps) {
   return (

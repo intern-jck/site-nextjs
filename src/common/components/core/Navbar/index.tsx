@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from '@/styles/Navbar.module.scss'
+import styles from './Navbar.module.scss'
 
 export default function NavBarComponent() {
   return (
@@ -7,7 +7,7 @@ export default function NavBarComponent() {
     <nav className={styles.navbar}>
       <div className={styles.brand}>
         <Link href='/'>
-          JCK SITE
+          JCK
         </Link>
       </div>
 

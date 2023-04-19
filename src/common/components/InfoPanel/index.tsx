@@ -1,6 +1,6 @@
 import styles from '@/styles/InfoPanel.module.scss';
 import Link from 'next/link';
-import type { ProjectType } from '../types/ProjectType';
+import type { ProjectType } from '../../types/ProjectType';
 
 type Props = {
   project: ProjectType,

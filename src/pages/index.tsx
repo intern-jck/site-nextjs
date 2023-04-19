@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <>
       <div className='page-header'>
-        {/* <h1>Home Page</h1> */}
       </div>
 
       <div className={'home-image'}>
@@ -13,8 +12,6 @@ export default function Home() {
           alt="Home page photo not found"
           fill
           priority
-          // width="600"
-          // height="400"
         />
       </div>
 

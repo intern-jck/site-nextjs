@@ -1,6 +1,6 @@
 type TechType = Array<string>;
 
-export type ProjectType = {
+type ProjectType = {
   name: string,
   client: string,
   client_url: string,
@@ -12,3 +12,4 @@ export type ProjectType = {
   photos: Array<string>,
 };
 
+export type { ProjectType };

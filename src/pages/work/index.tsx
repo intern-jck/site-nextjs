@@ -1,13 +1,14 @@
-import type { ProjectType } from '../../common/types/ProjectType';
+import type { ProjectType } from '@/common/types';
 import { getProjects } from '../../modules/data';
-import Card from '../../common/components/Card';
-import styles from '@/styles/Mecha.module.scss';
+import Card from '@/common/components/Card';
+import styles from './Work.module.scss';
 
 type Props = {
   projects: ProjectType[],
 };
 
 export default function Work({ projects }: Props) {
+  console.log(projects)
   return (
     <div className='container'>
 
@@ -16,18 +17,16 @@ export default function Work({ projects }: Props) {
       </div>
 
       <div className='page-content'>
-        <div className={styles.mechaContent}>
+        <div className={styles.workContent}>
           {
             projects.map((project, i) => {
               return (
                 <Card
                   key={i}
-                  cardId={project.link}
                   cardTitle={project.name}
                   cardImage={project.photos[0]}
                   cardText={project.short}
-                  cardSlug={project.link}
-                  clickHandler={() => console.log(project.link)}
+                  cardLink={`/projects/${project.link}`}
                 />
               )
             })

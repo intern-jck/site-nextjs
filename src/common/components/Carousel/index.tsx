@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
-import styles from '@/styles/Carousel.module.scss';
 import Image from 'next/image';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
+import styles from './Carousel.module.scss';
 
 type CarouselProps = {
   slides: Array<string>
-}
+};
 
 export default function Carousel({ slides }: CarouselProps) {
   const [slideIndex, setSlideIndex] = useState(0);

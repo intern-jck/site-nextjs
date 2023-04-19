@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const projectsURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/mechaData.json';
-const photosURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/photosData.json';
-const codeURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/codeData.json';
+const projectsURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/work.json';
+const photosURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/photos.json';
+const codeURL = 'https://raw.githubusercontent.com/intern-jck/site-html/main/assets/data/code.json';
 
 export async function getProjects() {
   try {

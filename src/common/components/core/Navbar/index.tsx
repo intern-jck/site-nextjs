@@ -14,8 +14,8 @@ export default function NavBarComponent() {
       <div className={styles.navMenu}>
         <ul>
           <li>
-            <Link href='/mecha'>
-              Mecha
+            <Link href='/work'>
+              Work
             </Link>
           </li>
           <li>

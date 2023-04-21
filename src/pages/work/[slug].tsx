@@ -1,5 +1,5 @@
-import Carousel from '@/common/components/Carousel';
-import InfoPanel from '@/common/components/InfoPanel';
+import Carousel from '@/common/components/elements/Carousel';
+import InfoPanel from '@/common/components/elements/InfoPanel';
 
 import { getProject, getProjectPaths } from '@/modules/data';
 import type { ProjectType } from '@/common/types/';
@@ -7,7 +7,7 @@ import styles from './WorkProject.module.scss';
 
 type Props = {
   project: ProjectType,
-}
+};
 
 export default function WorkProjectComponent({ project }: Props) {
   console.log('work comp', project.link)
@@ -32,13 +32,13 @@ export default function WorkProjectComponent({ project }: Props) {
 
     </div>
   );
-}
+};
 
 type ParamsType = {
   params: {
     slug: string,
   }
-}
+};
 
 export async function getStaticProps({ params }: ParamsType) {
   console.log('work static props', params)
@@ -47,7 +47,7 @@ export async function getStaticProps({ params }: ParamsType) {
   return {
     props: { project }
   }
-}
+};
 
 export async function getStaticPaths() {
   const projectPaths = await getProjectPaths();
@@ -61,4 +61,4 @@ export async function getStaticPaths() {
     }),
     fallback: false,
   }
-}
+};

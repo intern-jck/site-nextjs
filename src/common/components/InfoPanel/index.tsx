@@ -1,6 +1,6 @@
-// import Link from 'next/link';
-import styles from './InfoPanel.module.scss';
+import Link from 'next/link';
 import type { ProjectType } from '@/common/types';
+import styles from './InfoPanel.module.scss';
 
 type Props = {
   project: ProjectType,
@@ -10,11 +10,24 @@ export default function InfoPanel({ project }: Props) {
   console.log('info panel', project)
   return (
     <div className={styles.infoPanel}>
-      INFO
-      <h3>{project.name}</h3>
-      {/* <h3>{project.client}</h3> */}
-      {/* <h3>{project.date}</h3> */}
-      {/* <h3>{project.info}</h3> */}
+      <div className={styles.infoRow}>
+        <h3>NAME: <span>{project.name}</span></h3>
+      </div>
+      <div className={styles.infoRow}>
+        <h3>CLIENT: <span>{project.client.name}</span></h3>
+      </div>
+      <div className={styles.infoRow}>
+        <h3>DATE: 
+          <span> {project.date.start_month} {project.date.start_year}</span> - 
+          <span> {project.date.end_month} {project.date.end_year}</span>
+        </h3>
+      </div>
+      <div className={styles.infoRow}>
+        <h3>TECH: <span>{project.tech.map((tech, i) => (<Link key={i} href={tech[1]}>{tech[0]}</Link>))}</span></h3>
+      </div>
+      <div className={styles.infoRow}>
+        <h3>INFO: <span>{project.info}</span></h3>
+      </div>
     </div>
   );
 };

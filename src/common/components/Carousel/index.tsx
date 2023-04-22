@@ -30,41 +30,38 @@ export default function Carousel({ slides }: CarouselProps) {
   return (
     <>
       <div className={styles.carousel}>
-        <div className={styles.carouselBody}>
-          <div className={styles.carouselImage}>
-            <Image
-              src={slides[slideIndex]}
-              alt="Home page photo not found"
-              fill
-            />
-          </div>
-
-          <div className={styles.carouselControls}>
-            <button
-              onClick={prevSlide}>
-              <FaChevronLeft
-                size={30} />
-            </button>
-            {/* <div className='carousel-indicator-div'>
-              {
-                slides.map((slide, index) => {
-                  return (
-                    <div
-                      className={`carousel-indicator ${index === slideIndex ? 'current-indicator' : null}`}
-                      key={index}
-                      name={index}
-                    // onClick={updateCurrentImage}
-                    />
-                  )
-                })
-              }
-            </div> */}
-            <button
-              onClick={nextSlide}>
-              <FaChevronRight
-                size={30} />
-            </button>
-          </div>
+        <div className={styles.carouselImage}>
+          <Image
+            src={slides[slideIndex]}
+            alt="Home page photo not found"
+            fill
+            priority
+            sizes="300px"
+          />
+        </div>
+        <div className={styles.carouselControls}>
+          <button
+            onClick={prevSlide}>
+            <FaChevronLeft />
+          </button>
+          {/* <div className='carousel-indicator-div'>
+            {
+              slides.map((slide, index) => {
+                return (
+                  <div
+                    className={`carousel-indicator ${index === slideIndex ? 'current-indicator' : null}`}
+                    key={index}
+                    name={index}
+                  // onClick={updateCurrentImage}
+                  />
+                )
+              })
+            }
+          </div> */}
+          <button
+            onClick={nextSlide}>
+            <FaChevronRight />
+          </button>
         </div>
       </div>
     </>

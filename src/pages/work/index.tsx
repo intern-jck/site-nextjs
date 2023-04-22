@@ -10,12 +10,10 @@ type Props = {
 export default function Work({ projects }: Props) {
   
   return (
-    <div className='container'>
-
+    <>
       <div className='page-header'>
         <h1>Work</h1>
       </div>
-
       <div className='page-content'>
         <div className={styles.workContent}>
           {
@@ -33,14 +31,13 @@ export default function Work({ projects }: Props) {
           }
         </div>
       </div>
-
-    </div>
+    </>
   )
-}
+};
 
 export async function getStaticProps() {
   const projects = await getProjects();
   return {
     props: { projects }
   }
-}
+};

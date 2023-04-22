@@ -1,6 +1,4 @@
-import Carousel from '@/common/components/elements/Carousel';
-import InfoPanel from '@/common/components/elements/InfoPanel';
-
+import { Carousel, InfoPanel } from '@/common/components/';
 import { getProject, getProjectPaths } from '@/modules/data';
 import type { ProjectType } from '@/common/types/';
 import styles from './WorkProject.module.scss';

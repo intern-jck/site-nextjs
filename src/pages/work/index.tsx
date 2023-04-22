@@ -1,6 +1,6 @@
 import type { ProjectType } from '@/common/types';
 import { getProjects } from '@/modules/data';
-import Card from '@/common/components/elements/Card';
+import { Card } from '@/common/components';
 import styles from './Work.module.scss';
 
 type Props = {

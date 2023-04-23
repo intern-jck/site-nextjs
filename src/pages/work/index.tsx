@@ -1,5 +1,5 @@
 import type { ProjectType } from '@/common/types';
-import { getProjects } from '@/modules/data';
+import { getProjects } from '@/modules/json';
 import { Card } from '@/common/components';
 import styles from './Work.module.scss';
 

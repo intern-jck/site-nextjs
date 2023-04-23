@@ -1,5 +1,5 @@
 import { Carousel, InfoPanel } from '@/common/components/';
-import { getProject, getProjectPaths } from '@/modules/data';
+import { getProject, getProjectPaths } from '@/modules/json';
 import type { ProjectType } from '@/common/types/';
 import styles from './WorkSlug.module.scss';
 
@@ -12,9 +12,9 @@ export default function WorkProjectComponent({ project }: Props) {
 
   return (
     <>
-      <div className='page-header'>
+      {/* <div className='page-header'>
         <h1>{project.name}</h1>
-      </div>
+      </div> */}
       <div className='page-content'>
         <div className={styles.projectContent}>
           <div className={styles.workProjectCarousel}>

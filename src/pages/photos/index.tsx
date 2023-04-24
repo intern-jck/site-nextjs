@@ -20,31 +20,9 @@ export default function Photos({ photos }: Props) {
 
       <div className='page-content'>
         <div className={styles.photosContent}>
-
           {
             photos.map((photo, i) => {
               return (
-
-                // <button key={i} className={styles.photoButton}>
-                //   <Image
-                //     loading='lazy'
-                //     src={photo}
-                //     alt='photo not found...'
-                //     width='600'
-                //     height='400'
-                //   />
-                // </button>
-                
-                // <Link key={i} href={'/'}>
-                //   <Image
-                //     src={photo}
-                //     alt="Card image not found"
-                //     fill
-                //     priority
-                //     sizes="100px"
-                //   />
-                // </Link>
-
                 <Link href={'#'} key={i} className={styles.photoContainer}>
                   <Image
                     src={photo}
@@ -58,11 +36,9 @@ export default function Photos({ photos }: Props) {
                     style={{ width: '100%', height: '100%' }} 
                   />
                 </Link>
-
               )
             })
           }
-
         </div>
       </div>
     </>

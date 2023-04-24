@@ -12,9 +12,11 @@ export default function WorkProjectComponent({ project }: Props) {
 
   return (
     <>
+
       {/* <div className='page-header'>
         <h1>{project.name}</h1>
       </div> */}
+
       <div className='page-content'>
         <div className={styles.projectContent}>
           <div className={styles.workProjectCarousel}>
@@ -25,6 +27,7 @@ export default function WorkProjectComponent({ project }: Props) {
           </div>
         </div>
       </div>
+
     </>
   );
 };
@@ -37,8 +40,8 @@ type ParamsType = {
 
 export async function getStaticProps({ params }: ParamsType) {
   // console.log('work static props', params)
-  const project = await getProject(params.slug);
   // console.log('got project', project.link)
+  const project = await getProject(params.slug);
   return {
     props: { project }
   }

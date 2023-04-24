@@ -1,0 +1,42 @@
+.navbar {
+  border: $border-stock;
+  background-color: $color-background;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  margin-left: 1rem;
+
+  a {
+    font-size: $font-size-xxlarge;
+    font-weight: bold;
+    text-align: center;  
+  }
+}
+
+.navMenu {
+  width: fit-content;
+  font-size: $font-size-xlarge;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+}
+
+.ham_menu {}

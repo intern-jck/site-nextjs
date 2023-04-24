@@ -1,15 +1,16 @@
 .card {
-  border: $border-thin;
+  border: $border-stock;
   border-radius: $border-radius-large;
-  padding: $padding-thin;
+  padding: $padding-stock;
   width: 20rem;
-  height: 25rem;
+  height: 26rem;
   display: grid;
-  grid-template-rows: 2rem 2fr 4rem;
+  grid-template-rows: 2rem 20rem 4rem;
 }
 
 .card:hover {
   scale: 105%;
+  cursor: pointer;
 }
 
 .cardTitle {
@@ -24,20 +25,16 @@
   position: relative;
 
   img {
-    padding: $padding-thin;
+    padding: $padding-stock;
     object-fit: contain;
   }
-}
-
-.cardImage:hover {
-  cursor: pointer;
 }
 
 .cardText {
   grid-row: 3;
   font-size: $font-size-large;
-  padding-top: $padding-thin;
   text-align: center;
+  padding-bottom: $padding-stock;
 }
 
 @media screen and (orientation:landscape) and (max-width: 1400px) {}

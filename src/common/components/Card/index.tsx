@@ -13,20 +13,22 @@ export default function Card(
   { cardTitle, cardImage, cardText, cardLink }: CardProps
 ) {
   return (
-    <div className={styles.card}>
-      <span className={styles.cardTitle}>
-        {cardTitle}
-      </span>
-      <div className={styles.cardImage}>
-        <Link href={cardLink}>
-          <Image
-            src={cardImage}
-            alt="Card image not found"
-            fill
-          />
-        </Link>
+    <Link href={cardLink}>
+      <div className={styles.card}>
+          <span className={styles.cardTitle}>
+            {cardTitle}
+          </span>
+          <div className={styles.cardImage}>
+            <Image
+              src={cardImage}
+              alt="Card image not found"
+              fill
+              sizes="(max-width: 1200px) 50vw,
+                33vw"
+            />
+          </div>
+          <span className={styles.cardText}>{cardText}</span>
       </div>
-      <span className={styles.cardText}>{cardText}</span>
-    </div>
+    </Link>
   )
 };

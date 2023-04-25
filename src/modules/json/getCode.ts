@@ -11,4 +11,4 @@ export async function getCode() {
     console.log('get photos error:', error)
     return error;
   }
-}
+};

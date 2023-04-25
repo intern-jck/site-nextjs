@@ -1,14 +1,18 @@
 import type { ProjectType } from '@/common/types';
-import { getProjects } from '@/modules/json';
 import { Card } from '@/common/components';
 import styles from './Work.module.scss';
+
+import useSWR from 'swr';
+import fetcher from '@/modules/utils/fetcher';
 
 type Props = {
   projects: ProjectType[],
 };
 
-export default function Work({ projects }: Props) {
+export default function Work() {
   
+  const { data, error } = useSWR<Array<ProjectType>>('/api/work', fetcher);
+
   return (
     <>
       <div className='page-header'>
@@ -17,27 +21,22 @@ export default function Work({ projects }: Props) {
       <div className='page-content'>
         <div className={styles.workContent}>
           {
-            projects.map((project, i) => {
+            data ?
+            data.map((work, i) => {
               return (
                 <Card
                   key={i}
-                  cardTitle={project.name}
-                  cardImage={project.photos[0]}
-                  cardText={project.short}
-                  cardLink={`/work/${project.link}`}
+                  cardTitle={work.name}
+                  cardImage={work.photos[0]}
+                  cardText={work.short}
+                  cardLink={`/work/${work.link}`}
                 />
               )
             })
+            : <></>
           }
         </div>
       </div>
     </>
   )
-};
-
-export async function getStaticProps() {
-  const projects = await getProjects();
-  return {
-    props: { projects }
-  }
 };

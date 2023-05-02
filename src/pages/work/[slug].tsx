@@ -1,5 +1,5 @@
 import { Carousel, InfoPanel } from '@/common/components/';
-import { getProject, getProjectPaths } from '@/modules/json';
+import { getJsonDataFromUrl } from '@/modules/json';
 import type { ProjectType } from '@/common/types/';
 import styles from './WorkSlug.module.scss';
 
@@ -8,15 +8,10 @@ type Props = {
 };
 
 export default function WorkProjectComponent({ project }: Props) {
-  // console.log('work comp', project.link)
+  console.log('work project', project)
 
   return (
     <>
-
-      {/* <div className='page-header'>
-        <h1>{project.name}</h1>
-      </div> */}
-
       <div className='page-content'>
         <div className={styles.projectContent}>
           <div className={styles.workProjectCarousel}>
@@ -27,7 +22,6 @@ export default function WorkProjectComponent({ project }: Props) {
           </div>
         </div>
       </div>
-
     </>
   );
 };
@@ -39,21 +33,29 @@ type ParamsType = {
 };
 
 export async function getStaticProps({ params }: ParamsType) {
-  // console.log('work static props', params)
-  // console.log('got project', project.link)
-  const project = await getProject(params.slug);
+  
+  const _projects = await getJsonDataFromUrl(process.env.GITHUB_WORK_JSON_URL!);
+
+  const project = _projects.filter((project: ProjectType) => {
+    if (project.link === params.slug) {
+      return project;
+    };
+  })[0];
+
   return {
     props: { project }
   }
 };
 
 export async function getStaticPaths() {
-  const projectPaths= await getProjectPaths();
+
+  const _projects = await getJsonDataFromUrl(process.env.GITHUB_WORK_JSON_URL!);
+
   return {
-    paths: projectPaths.map((project) => {
+    paths: _projects.map((project: ProjectType) => {
       return {
         params: {
-          slug: project.slug,
+          slug: project.link,
         },
       }
     }),

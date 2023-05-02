@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Card.module.scss';
 
 type CardProps = {
   className: string,
@@ -20,7 +19,7 @@ export default function Card(
   }: CardProps
 ) {
   return (
-    <div className={className ? className : styles.card}>
+    <div className={className}>
       <span>{cardTitle}</span>
       <Link href={cardLink}>
         <Image

@@ -17,8 +17,9 @@ export default function Work() {
     <>
       <div className='page-header'>
         <h1>Work</h1>
+        <h2>Professional Work</h2>
       </div>
-      
+
       <div className='page-content'>
 
         <div className={styles.workContent}>

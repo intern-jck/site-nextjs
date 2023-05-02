@@ -6,46 +6,53 @@
   align-content: flex-start;
   gap: 2rem;
 
+  .workCard > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .workCard {
-    border: $border-thin;
+    border: $border-stock;
     border-radius: $border-radius-large;
-    padding: $padding-thin;
     width: 20rem;
     height: 25rem;
+
     display: grid;
-    grid-template-rows: 2rem 2fr 4rem;
+    grid-template-rows: 15% 60% 25%;
 
     span {
       grid-row: 1;
       font-size: $font-size-xlarge;
       font-weight: bold;
-      text-align: center;
     }
 
     a {
-      display: block;
-      border: $border-test-orange;
-      width: 100%;
+      margin: auto;
+      width: 80%;
       height: 100%;
       grid-row: 2/3;
       position: relative;
+      display: block;
 
       img {
-        padding: $padding-thin;
+        border: $border-stock;
+        padding: $padding-stock;
         object-fit: contain;
+        width: 100%;
+        height: 100%;
       }
-
     }
 
     p {
+      margin: 0;
       grid-row: 3;
       font-size: $font-size-large;
-      padding-top: $padding-thin;
-      text-align: center;
+      padding: $padding-thin;
     }
 
   }
-
 
   .workCard:hover {
     scale: 105%;
@@ -53,4 +60,3 @@
   }
 
 }
-

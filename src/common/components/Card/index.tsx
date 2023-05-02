@@ -19,31 +19,21 @@ export default function Card(
     cardLink
   }: CardProps
 ) {
-  console.log(className)
   return (
     <div className={className ? className : styles.card}>
-      <span
-        // className={className ? `${className}-title` : styles.cardTitle}
-        className={`${className}-title`}
-      >
-        {cardTitle}
-      </span>
-      <Link
-        className={className ? `${className}-link` : styles.cardLink}
-        href={cardLink}
-      >
+      <span>{cardTitle}</span>
+      <Link href={cardLink}>
         <Image
-          className={className ? `${className}-image` : styles.cardImage}
           src={cardImage}
-          alt="Card image not found"
+          alt='Card image not found'
+          priority
           fill
+          sizes='(max-width: 768px) 100vw,
+                  (max-width: 1200px) 50vw,
+                  33vw'
         />
       </Link>
-      <p
-        className={className ? `${className}-text` : styles.cardText}
-      >
-        {cardText}
-      </p>
+      <p>{cardText}</p>
     </div>
   );
 };

@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function Work() {
-  
+
   const { data, error } = useSWR<Array<ProjectType>>('/api/work', fetcher);
 
   return (
@@ -18,7 +18,9 @@ export default function Work() {
       <div className='page-header'>
         <h1>Work</h1>
       </div>
+      
       <div className='page-content'>
+
         <div className={styles.workContent}>
           {
             data ?
@@ -26,6 +28,7 @@ export default function Work() {
               return (
                 <Card
                   key={i}
+                  className={styles.workCard}
                   cardTitle={work.name}
                   cardImage={work.photos[0]}
                   cardText={work.short}
@@ -36,6 +39,7 @@ export default function Work() {
             : <></>
           }
         </div>
+
       </div>
     </>
   )

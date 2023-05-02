@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './Card.module.scss';
 
 type CardProps = {
+  className: string,
   cardTitle: string,
   cardImage: string,
   cardText: string,
@@ -10,23 +11,39 @@ type CardProps = {
 };
 
 export default function Card(
-  { cardTitle, cardImage, cardText, cardLink }: CardProps
+  { 
+    className,
+    cardTitle,
+    cardImage,
+    cardText,
+    cardLink
+  }: CardProps
 ) {
+  console.log(className)
   return (
-    <div className={styles.card}>
-      <span className={styles.cardTitle}>
+    <div className={className ? className : styles.card}>
+      <span
+        // className={className ? `${className}-title` : styles.cardTitle}
+        className={`${className}-title`}
+      >
         {cardTitle}
       </span>
-      <div className={styles.cardImage}>
-        <Link href={cardLink}>
-          <Image
-            src={cardImage}
-            alt="Card image not found"
-            fill
-          />
-        </Link>
-      </div>
-      <span className={styles.cardText}>{cardText}</span>
+      <Link
+        className={className ? `${className}-link` : styles.cardLink}
+        href={cardLink}
+      >
+        <Image
+          className={className ? `${className}-image` : styles.cardImage}
+          src={cardImage}
+          alt="Card image not found"
+          fill
+        />
+      </Link>
+      <p
+        className={className ? `${className}-text` : styles.cardText}
+      >
+        {cardText}
+      </p>
     </div>
-  )
+  );
 };

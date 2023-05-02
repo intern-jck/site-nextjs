@@ -1,6 +1,4 @@
-import styles from '@/styles/Contact.module.scss';
-
-// const inter = Inter({ subsets: ['latin'] })
+import styles from './Contact.module.scss';
 
 export default function Contact() {
   return (

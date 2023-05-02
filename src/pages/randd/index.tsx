@@ -1,4 +1,4 @@
-import styles from '@/styles/Randd.module.scss';
+import styles from './Randd.module.scss';
 
 export default function Randd() {
   return (

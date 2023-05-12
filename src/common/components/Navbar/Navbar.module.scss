@@ -1,42 +1,63 @@
 .navbar {
   border: $border-stock;
   background-color: $color-background;
-  width: 100%;
+  padding: $padding-stock;
   position: fixed;
-  z-index: 99;
+  width: 100%;
   top: 0;
   left: 0;
+  z-index: 99;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-}
-
-.brand {
-  margin-left: 1rem;
-
-  a {
-    font-size: $font-size-xxlarge;
-    font-weight: bold;
-    text-align: center;  
-  }
+  justify-content: center;
+  gap: 0;
 }
 
 .navMenu {
-  width: fit-content;
-  font-size: $font-size-xlarge;
+  font-size: $font-size-xxlarge;
   font-weight: bold;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-  }
+  justify-content: center;
+  gap: $gap-xxxxlarge;
 }
 
-.ham_menu {}
+.hamMenu {
+  display: none;
+
+  button {
+    border: $border-stock;
+    background: none;
+    font-size: $font-size-xxxlarge;
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hamMenu {
+    display: flex;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .showMenu {
+    margin-top: $margin-xlarge;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-stock;
+  }
+
+}

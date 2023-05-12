@@ -52,7 +52,7 @@
     display: none;
   }
 
-  #nav-menu.active {
+  #nav-menu .active {
     top: 0;
     display: flex;
     flex-direction: column;

@@ -28,7 +28,9 @@ a {
   text-decoration: none;
 }
 
+button:hover,
 a:hover {
+  cursor: pointer;
   color: $color-active;
 }
 

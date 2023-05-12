@@ -8,7 +8,6 @@ type Props = {
 };
 
 export default function WorkProjectComponent({ project }: Props) {
-  console.log('work project', project)
 
   return (
     <>

@@ -7,7 +7,7 @@ type Props = {
 }
 
 export default function InfoPanel({ project }: Props) {
-  console.log('info panel', project)
+  
   return (
     <div className={styles.infoPanel}>
       <div className={styles.infoRow}>
